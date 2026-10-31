@@ -1,121 +1,57 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FRIEND PARTY</title>
 <style>
-:root{--bg:#0b1020;--panel:#141c33;--panel2:#1b2744;--line:#2b3a60;--text:#f4f6ff;--muted:#9eabc9;--pink:#ff5ca8;--cyan:#57d9ff;--yellow:#ffd166;--green:#6ee7a8}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2850 0,#0b1020 58%);color:var(--text);font:16px system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
-button,input{font:inherit}button{border:0;border-radius:14px;padding:12px 16px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--pink),#a66bff);color:white;box-shadow:0 5px 0 #663c9c;transition:.15s}button:active{transform:translateY(3px);box-shadow:0 2px 0 #663c9c}button:disabled{opacity:.45;cursor:not-allowed}
-input{width:100%;background:#0d1529;border:1px solid var(--line);border-radius:12px;padding:13px;color:white;outline:none}input:focus{border-color:var(--cyan)}
-header{max-width:1100px;margin:auto;padding:22px 18px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:1000;letter-spacing:1px;font-size:22px}.logo span{color:var(--pink)}.pill{font-size:12px;color:var(--green);border:1px solid #326b59;padding:6px 10px;border-radius:99px}
-main{max-width:1000px;margin:20px auto;padding:0 18px 50px}.hero{text-align:center;margin:34px 0 28px}.hero h1{font-size:clamp(38px,8vw,68px);line-height:1;margin:0 0 12px;letter-spacing:-3px}.hero h1 b{color:var(--pink)}.hero p{color:var(--muted);margin:0}
-.card{background:linear-gradient(160deg,#192442,#121a30);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 15px 50px #0004}.homegrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:auto}.card h2{margin:0 0 8px}.muted{color:var(--muted)}.field{display:grid;gap:7px;margin:14px 0}.field label{font-size:13px;color:var(--muted);font-weight:700}.secondary{background:#263657;box-shadow:0 5px 0 #111c33}.small{font-size:13px;padding:9px 12px}.games{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.game{background:#111a30;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;cursor:pointer}.game:hover{border-color:var(--pink);transform:translateY(-2px)}.emoji{font-size:30px}.game strong{display:block;margin:7px 0 3px}.game small{color:var(--muted)}
-.hidden{display:none!important}.toprow{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}.roomcode{font-size:26px;font-weight:1000;letter-spacing:5px;color:var(--yellow)}.players{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.player{background:#202e4c;border:1px solid #34486e;border-radius:13px;padding:10px 13px}.host{color:var(--yellow);font-size:11px}.notice{color:var(--cyan);min-height:24px;margin:10px 0}.gamearea{margin-top:16px}.gamearea h2{margin-top:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.options button{min-height:58px;background:#253655;box-shadow:0 4px 0 #111c33}.options button.selected{outline:3px solid var(--yellow)}.canvaswrap{background:#fff;border-radius:15px;overflow:hidden;touch-action:none}.canvaswrap canvas{display:block;width:100%;height:300px;touch-action:none;cursor:crosshair}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0}.tools input[type=color]{width:42px;height:38px;padding:2px}.tools input[type=range]{width:100px}.chat{background:#0d1529;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:160px;overflow:auto;margin:12px 0}.chat p{margin:5px 0;color:#dce6ff}.votegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.votegrid button{background:#263657;box-shadow:0 4px 0 #111c33}.footer{text-align:center;color:#7282a7;font-size:12px;margin-top:28px}
-@media(max-width:650px){.homegrid{grid-template-columns:1fr}.games{grid-template-columns:1fr 1fr}.card{padding:17px}.canvaswrap canvas{height:250px}.options{grid-template-columns:1fr}.hero{margin-top:20px}}
+:root{--bg:#0b1020;--panel:#192746;--line:#35496f;--pink:#ff5ca8;--cyan:#57d9ff;--yellow:#ffd166;--text:#f7f8ff;--muted:#b4bfd9}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#24345f,#0b1020 65%);color:var(--text);font:16px system-ui,sans-serif;min-height:100vh}button,input{font:inherit}button{border:0;border-radius:13px;padding:13px 16px;font-weight:800;cursor:pointer;color:white;background:linear-gradient(135deg,var(--pink),#936bff);box-shadow:0 4px 0 #583c91}button:disabled{opacity:.45}input{width:100%;padding:13px;border-radius:11px;background:#0d172d;border:1px solid var(--line);color:white}header,main{max-width:950px;margin:auto;padding:18px}header{display:flex;justify-content:space-between}.logo{font-size:22px;font-weight:1000}.logo span{color:var(--pink)}.muted{color:var(--muted)}.hero{text-align:center;margin:25px 0}.hero h1{font-size:clamp(38px,8vw,65px);margin:0}.hero b{color:var(--pink)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:linear-gradient(160deg,#1b2a4d,#121c34);border:1px solid var(--line);border-radius:19px;padding:19px;margin-bottom:13px}.field{margin:12px 0}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}.secondary{background:#293b60;box-shadow:0 4px 0 #111b32}.hidden{display:none!important}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.code{font-size:28px;font-weight:1000;letter-spacing:5px;color:var(--yellow)}.players{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.player{background:#243454;padding:9px 12px;border-radius:11px}.games{display:grid;grid-template-columns:1fr 1fr;gap:10px}.game{background:#111c34;border:1px solid var(--line);box-shadow:none;text-align:left}.game.main{border:2px solid var(--pink)}.game span{font-size:28px;display:block}.game small{display:block;color:var(--muted);font-weight:400;margin-top:5px}.notice{color:var(--cyan);min-height:22px}.canvas{background:white;border-radius:13px;overflow:hidden}.canvas canvas{width:100%;height:300px;display:block;touch-action:none}.tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:10px 0}.tools input[type=color]{width:45px;padding:3px}.tools input[type=range]{width:100px}.chat{background:#0b152a;border:1px solid var(--line);padding:10px;border-radius:12px;max-height:150px;overflow:auto;margin:10px 0}.chat p{margin:5px}.row{display:flex;gap:8px}.row input{min-width:0}.options,.votes{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}.options button,.votes button{background:#293b60;box-shadow:0 4px 0 #111b32}.tip{background:#0d172d;padding:12px;border-radius:12px;margin:10px 0}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.games{grid-template-columns:1fr 1fr}.card{padding:15px}.canvas canvas{height:250px}.row{flex-direction:column}.options{grid-template-columns:1fr}}
 </style></head><body>
-<header><div class="logo">🎉 FRIEND <span>PARTY</span></div><div class="pill">● ONLINE PARTY</div></header>
+<header><div class="logo">🎉 FRIEND <span>PARTY</span></div><div class="muted">● ONLINE PARTY</div></header>
 <main>
-<section id="home">
- <div class="hero"><h1>PLAY. LAUGH. <b>REPEAT.</b></h1><p>Little games. Big friend-group chaos. Up to 6 players.</p></div>
- <div class="homegrid">
-  <div class="card"><h2>🚀 Create a room</h2><p class="muted">Start a party and invite your friends.</p><div class="field"><label>Your name</label><input id="createName" maxlength="18" placeholder="Enter your nickname"></div><button id="createBtn" style="width:100%">CREATE ROOM</button></div>
-  <div class="card"><h2>🔑 Join a room</h2><p class="muted">Got a code? Jump right in.</p><div class="field"><label>Your name</label><input id="joinName" maxlength="18" placeholder="Enter your nickname"></div><div class="field"><label>Room code</label><input id="joinCode" maxlength="6" placeholder="ABC123" style="text-transform:uppercase;letter-spacing:3px"></div><button id="joinBtn" class="secondary" style="width:100%">JOIN PARTY</button></div>
- </div><p id="homeError" class="notice" style="text-align:center"></p>
- <div class="footer">Made for friend groups • 2–6 players • Works on phones and computers</div>
-</section>
-<section id="lobby" class="hidden">
- <div class="toprow"><div><div class="muted">YOUR ROOM CODE</div><div class="roomcode" id="roomCode">------</div></div><button class="secondary small" id="copyBtn">COPY INVITE</button></div>
- <div class="card"><div class="toprow"><div><h2>👋 The party room</h2><div class="muted" id="playerCount">Waiting for friends…</div></div><button class="secondary small" id="leaveBtn">LEAVE</button></div><div class="players" id="players"></div>
- <div id="hostGames"><h3>🎮 Choose a game</h3><div class="games">
-  <div class="game" data-game="draw"><div class="emoji">🎨</div><strong>Draw & Guess</strong><small>Draw a secret word. Friends guess!</small></div>
-  <div class="game" data-game="imposter"><div class="emoji">🕵️</div><strong>Find the Imposter</strong><small>One player doesn't know the word.</small></div>
-  <div class="game" data-game="quiz"><div class="emoji">🧠</div><strong>Quiz Battle</strong><small>Quick-fire trivia questions.</small></div>
-  <div class="game" data-game="wyr"><div class="emoji">🤔</div><strong>Would You Rather?</strong><small>Pick a side and compare votes.</small></div>
- </div></div><p id="lobbyWait" class="muted hidden">The host is choosing a game…</p></div>
-</section>
-<section id="play" class="hidden">
- <div class="toprow"><div><div class="muted" id="gameLabel">GAME</div><h2 id="gameTitle">Let's play!</h2></div><button class="secondary small" id="backBtn">BACK TO LOBBY</button></div>
- <div class="card gamearea" id="gameContent"></div>
- <div class="card" style="margin-top:14px"><strong>🏆 Scores</strong><div class="players" id="scores"></div><p class="muted" style="margin-bottom:0">Host can advance rounds or return to the lobby.</p></div>
-</section>
+<section id="home"><div class="hero"><h1>PLAY. LAUGH. <b>REPEAT.</b></h1><p class="muted">Easy party games for up to 6 friends.</p></div>
+<div class="grid"><div class="card"><h2>🚀 Create room</h2><div class="field"><label>Your nickname</label><input id="createName" placeholder="Your name" maxlength="18"></div><button id="createBtn" style="width:100%">CREATE PARTY</button></div>
+<div class="card"><h2>🔑 Join friends</h2><div class="field"><label>Your nickname</label><input id="joinName" placeholder="Your name" maxlength="18"></div><div class="field"><label>Room code</label><input id="joinCode" placeholder="ABC123" maxlength="6"></div><button class="secondary" id="joinBtn" style="width:100%">JOIN PARTY</button></div></div><p id="homeError" class="notice"></p></section>
+<section id="lobby" class="hidden"><div class="top"><div><div class="muted">ROOM CODE — SHARE WITH FRIENDS</div><div class="code" id="roomCode"></div></div><button class="secondary" id="copyBtn">COPY INVITE LINK</button></div><div class="card"><div class="top"><h2>👋 Party lobby</h2><button class="secondary" id="leaveBtn">LEAVE</button></div><p class="muted" id="playerCount"></p><div class="players" id="players"></div><div id="hostGames"><h3>Choose a game</h3><p class="muted">Start here: Draw & Guess is the easiest!</p><div class="games">
+<button class="game main" data-game="draw"><span>🎨</span>Draw & Guess ⭐<small>One draws, everyone guesses.</small></button>
+<button class="game" data-game="imposter"><span>🕵️</span>Find the Imposter<small>Find who doesn't know the word.</small></button>
+<button class="game" data-game="quiz"><span>🧠</span>Quiz Battle<small>Pick the right answer.</small></button>
+<button class="game" data-game="wyr"><span>🤔</span>Would You Rather?<small>Choose your favourite option.</small></button></div></div><p id="lobbyWait" class="muted hidden">Waiting for the host…</p></div></section>
+<section id="play" class="hidden"><div class="top"><h2 id="gameTitle">Game</h2><button class="secondary" id="backBtn">BACK TO LOBBY</button></div><div class="card" id="gameContent"></div><div class="card"><b>🏆 Scores</b><div class="players" id="scores"></div></div></section>
 </main>
 <script src="/socket.io/socket.io.js"></script><script>
-const socket=io();let room=null,me=null,privateData=null,localVotes={},drawChat=[],lastQuizQuestion=null,quizAnswered=false;
-const $=id=>document.getElementById(id);
-function show(id){["home","lobby","play"].forEach(x=>$(x).classList.toggle("hidden",x!==id))}
-function err(s){$("homeError").textContent=s||""}
-function request(event,data){return new Promise(resolve=>socket.emit(event,data,resolve))}
-$("createBtn").onclick=async()=>{err("");const r=await request("room:create",{name:$("createName").value});if(r?.error)return err(r.error);enter(r.room)};
-$("joinBtn").onclick=async()=>{err("");const r=await request("room:join",{name:$("joinName").value,code:$("joinCode").value});if(r?.error)return err(r.error);enter(r.room)};
-function enter(r){room=r;me=socket.id;show("lobby");renderRoom();$("roomCode").textContent=r.code}
-$("copyBtn").onclick=async()=>{const url=location.origin+"?room="+room.code;try{await navigator.clipboard.writeText("Join my FRIEND PARTY room "+room.code+"! "+url);$("copyBtn").textContent="COPIED!";}catch{prompt("Copy this invite:",url)}};
-$("leaveBtn").onclick=()=>{socket.emit("room:leave");room=null;show("home")};
-$("backBtn").onclick=()=>{if(room?.hostId===me)socket.emit("lobby:return")};
-document.querySelectorAll(".game").forEach(el=>el.onclick=()=>socket.emit("game:start",el.dataset.game));
-socket.on("connect",()=>{me=socket.id;const c=new URLSearchParams(location.search).get("room");if(c)$("joinCode").value=c});
-socket.on("room:update",r=>{room=r;renderRoom()});
-socket.on("app:error",m=>{err(m);alert(m)});
-socket.on("notice",m=>{const n=$("notice");if(n)n.textContent=m;});
-socket.on("game:private",d=>{privateData=d;renderGame()});
-function renderRoom(){if(!room)return;$("roomCode").textContent=room.code;$("playerCount").textContent=`${room.players.length}/6 players`;
-$("players").innerHTML=room.players.map(p=>`<div class="player">${esc(p.name)} ${p.id===room.hostId?'<span class="host">HOST</span>':''} ${p.id===me?'(YOU)':''}</div>`).join("");
-$("hostGames").classList.toggle("hidden",room.hostId!==me);$("lobbyWait").classList.toggle("hidden",room.hostId===me);
-if(room.game){show("play");renderGame()}else show("lobby")}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function renderScores(){if(!room)return;$("scores").innerHTML=[...room.players].sort((a,b)=>b.score-a.score).map(p=>`<div class="player">${esc(p.name)} · <b>${p.score}</b></div>`).join("")}
-function renderGame(){if(!room?.game)return;const g=room.game;renderScores();$("gameLabel").textContent=`ROUND ${g.round} · ${room.players.length} PLAYERS`;
-const titles={draw:"🎨 Draw & Guess",imposter:"🕵️ Find the Imposter",quiz:"🧠 Quiz Battle",wyr:"🤔 Would You Rather?"};$("gameTitle").textContent=titles[g.type];
-const host=room.hostId===me;let html=`<p id="notice" class="notice"></p>`;
-if(g.type==="draw"){
- const drawer=room.players.find(p=>p.id===g.drawerId);const isDrawer=g.drawerId===me;
- html+=`<h2>${isDrawer?"Your turn to draw!":esc(drawer?.name||"Someone")} is drawing</h2>`;
- if(isDrawer)html+=`<p class="muted">Your secret word: <b style="color:var(--yellow)">${esc(privateData?.word||"…")}</b> — draw it without typing it!</p>`;
- else html+=`<p class="muted">Guess the word in the chat below.</p>`;
- html+=`<div class="canvaswrap"><canvas id="board" width="900" height="420"></canvas></div>`;
- if(isDrawer)html+=`<div class="tools"><label>Color <input id="penColor" type="color" value="#20243a"></label><label>Size <input id="penSize" type="range" min="2" max="24" value="5"></label><button class="secondary small" id="clearBoard">Clear</button></div>`;
- html+=`<div class="field"><label>Your guess</label><div style="display:flex;gap:8px"><input id="guessInput" placeholder="Type your guess…" maxlength="70"><button id="guessBtn">SEND</button></div></div><div class="chat" id="drawMessages"></div>`;
- if(g.phase==="round-over")html+=`<h3>${esc(g.message)}</h3>`;
- if(host)html+=`<div class="actions"><button id="nextBtn">${g.phase==="round-over"?"NEXT DRAWER":"NEXT ROUND"}</button><button class="secondary" id="lobbyBtn">END GAME</button></div>`;
+const socket=io(),$=id=>document.getElementById(id);let room=null,me=null,privateData=null,strokes=[],messages=[],quizAnswered=false,voted=false,lastQuestion=null,lastRoundKey='';
+function show(id){['home','lobby','play'].forEach(x=>$(x).classList.toggle('hidden',x!==id))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function req(ev,data){return new Promise(resolve=>socket.emit(ev,data,resolve))}
+function enter(r){room=r;me=socket.id;strokes=[];messages=[];show('lobby');renderRoom()}
+$('createBtn').onclick=async()=>{let r=await req('room:create',{name:$('createName').value});$('homeError').textContent=r?.error||'';if(r?.room)enter(r.room)};
+$('joinBtn').onclick=async()=>{let r=await req('room:join',{name:$('joinName').value,code:$('joinCode').value});$('homeError').textContent=r?.error||'';if(r?.room)enter(r.room)};
+socket.on('connect',()=>{me=socket.id;let c=new URLSearchParams(location.search).get('room');if(c)$('joinCode').value=c});
+$('copyBtn').onclick=async()=>{let u=location.origin+'?room='+room.code;try{await navigator.clipboard.writeText(u);$('copyBtn').textContent='COPIED!'}catch{prompt('Copy this invite link',u)}};
+$('leaveBtn').onclick=()=>{socket.emit('room:leave');room=null;show('home')};
+$('backBtn').onclick=()=>{if(room?.hostId===me)socket.emit('lobby:return')};
+document.querySelectorAll('.game').forEach(b=>b.onclick=()=>socket.emit('game:start',b.dataset.game));
+socket.on('room:update',r=>{const key=r.game?(r.game.type+':'+r.game.round):'';if(key!==lastRoundKey){voted=false;quizAnswered=false;if(key!==lastRoundKey&&key)messages=[];lastRoundKey=key}room=r;renderRoom()});socket.on('game:private',d=>{privateData=d;renderGame()});
+socket.on('app:error',m=>alert(m));socket.on('notice',m=>{let n=$('drawNotice');if(n)n.textContent=m});
+function renderRoom(){if(!room)return;$('roomCode').textContent=room.code;$('playerCount').textContent=room.players.length+'/6 players';$('players').innerHTML=room.players.map(p=>`<div class="player">${esc(p.name)} ${p.id===room.hostId?'👑':''} ${p.id===me?'(YOU)':''}</div>`).join('');$('hostGames').classList.toggle('hidden',room.hostId!==me);$('lobbyWait').classList.toggle('hidden',room.hostId===me);if(room.game){show('play');renderGame()}else show('lobby')}
+function scores(){$('scores').innerHTML=[...room.players].sort((a,b)=>b.score-a.score).map(p=>`<div class="player">${esc(p.name)} · ${p.score}</div>`).join('')}
+function renderGame(){if(!room?.game)return;let g=room.game,host=room.hostId===me; scores();let titles={draw:'🎨 Draw & Guess',imposter:'🕵️ Find the Imposter',quiz:'🧠 Quiz Battle',wyr:'🤔 Would You Rather?'};$('gameTitle').textContent=titles[g.type];let h='';
+if(g.type==='draw'){let drawer=room.players.find(p=>p.id===g.drawerId),isDrawer=g.drawerId===me;h+=`<h2>${isDrawer?'Your turn to draw!':esc(drawer?.name||'Your friend')+' is drawing'}</h2>`;h+=isDrawer?`<div class="tip">🤫 Secret word: <b style="color:var(--yellow)">${esc(privateData?.word||'Loading…')}</b><br>Draw it, don't type it!</div>`:'<div class="tip">👀 Guess the picture! Type your answer below.</div>';h+='<div class="canvas"><canvas id="board" width="900" height="420"></canvas></div>';if(isDrawer)h+='<div class="tools">Color <input id="color" type="color" value="#20243a"> Size <input id="size" type="range" min="3" max="28" value="7"><button class="secondary" id="clear">CLEAR</button></div>';h+='<div class="field"><label>Your guess / message</label><div class="row"><input id="guess" placeholder="Type here…" maxlength="70"><button id="send">SEND</button></div></div><div class="chat" id="messages">'+(messages.map(m=>`<p><b>${esc(m.name)}:</b> ${esc(m.text)}</p>`).join('')||'<p class="muted">Guesses appear here.</p>')+'</div><p class="notice" id="drawNotice"></p>';if(g.phase==='round-over')h+=`<h3>🎉 ${esc(g.message)}</h3>`;if(host)h+=`<div class="top"><button id="next">${g.phase==='round-over'?'NEXT DRAWER':'SKIP TURN'}</button><button class="secondary" id="end">END GAME</button></div>`}
+if(g.type==='imposter'){let role=privateData?.kind==='imposter-role'?privateData:null;h+=`<h2>Your secret role</h2><div class="tip"><b>${role?.role||'WAITING…'}</b><p>${role?.role==='IMPOSTER'?"You don't know the word. Blend in!":'Secret word: '+esc(role?.word||'')}</p></div><p>Take turns saying a clue out loud, then vote.</p>`;if(g.phase!=='round-over')h+=`<h3>Who is the imposter?</h3><div class="votes">${room.players.map(p=>`<button class="vote" data-id="${p.id}" ${voted?'disabled':''}>${esc(p.name)}</button>`).join('')}</div><p>${g.votes}/${room.players.length} votes</p>`;else h+=`<h3>${esc(g.message)}</h3>`;if(host)h+='<button id="next">NEW ROUND</button> <button class="secondary" id="end">END GAME</button>'}
+if(g.type==='quiz'){if(lastQuestion!==g.question?.q){lastQuestion=g.question?.q;quizAnswered=false}h+=`<h2>${esc(g.question?.q||'Question')}</h2><div class="options">${(g.options||[]).map((o,i)=>`<button class="answer" data-i="${i}" ${quizAnswered?'disabled':''}>${esc(o)}</button>`).join('')}</div><p>${g.answered}/${room.players.length} answered</p>`;if(host)h+='<button id="next">NEXT QUESTION</button> <button class="secondary" id="end">END GAME</button>'}
+if(g.type==='wyr'){h+='<h2>Would you rather…?</h2><div class="options">'+(g.wyr||[]).map((o,i)=>`<button class="choice" data-i="${i}" ${voted?'disabled':''}>${esc(o)}</button>`).join('')+'</div><p>'+g.votes+'/'+room.players.length+' voted</p>';if(host)h+='<button id="next">NEXT QUESTION</button> <button class="secondary" id="end">END GAME</button>'}
+$('gameContent').innerHTML=h;
+$('next')?.addEventListener('click',()=>{strokes=[];messages=[];voted=false;socket.emit('game:next')});$('end')?.addEventListener('click',()=>socket.emit('lobby:return'));
+$('send')?.addEventListener('click',send);$('guess')?.addEventListener('keydown',e=>{if(e.key==='Enter')send()});
+document.querySelectorAll('.answer').forEach(b=>b.onclick=()=>{quizAnswered=true;socket.emit('quiz:answer',+b.dataset.i);document.querySelectorAll('.answer').forEach(x=>x.disabled=true)});
+document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{voted=true;socket.emit('wyr:vote',+b.dataset.i);document.querySelectorAll('.choice').forEach(x=>x.disabled=true)});
+document.querySelectorAll('.vote').forEach(b=>b.onclick=()=>{voted=true;socket.emit('imposter:vote',b.dataset.id);document.querySelectorAll('.vote').forEach(x=>x.disabled=true)});
+if(g.type==='draw')setupBoard()
 }
-if(g.type==="imposter"){
- const role=privateData?.kind==="imposter-role"?privateData:null;
- html+=`<h2>Secret roles 🤫</h2><div class="card" style="background:#0d1529"><div class="muted">YOUR ROLE</div><div style="font-size:30px;font-weight:1000;color:${role?.role==="IMPOSTER"?"var(--pink)":"var(--green)"}">${role?.role||"WAITING…"}</div><p>${role?.role==="IMPOSTER"?"Blend in! You don't know the secret word.":`Secret word: ${esc(role?.word||"")}`}</p></div><p class="muted">Take turns giving one-word clues. Then vote for who you think is the imposter.</p>`;
- if(g.phase==="round-over")html+=`<h3>${esc(g.message)}</h3><p>Imposter: <b>${esc(room.players.find(p=>p.id===window.lastImposter)?.name||"revealed")}</b></p>`;
- else {html+=`<h3>🗳️ Vote for the imposter</h3><div class="votegrid">${room.players.map(p=>`<button class="voteBtn" data-id="${p.id}" ${g.votes>=room.players.length?"disabled":""}>${esc(p.name)}</button>`).join("")}</div><p class="muted">${g.votes}/${room.players.length} votes submitted</p>`}
- if(host)html+=`<div class="actions"><button id="nextBtn">NEW ROUND</button><button class="secondary" id="lobbyBtn">END GAME</button></div>`;
-}
-if(g.type==="quiz"){
- if(lastQuizQuestion!==g.question?.q){lastQuizQuestion=g.question?.q;quizAnswered=false;}
- html+=`<h2>${esc(g.question?.q||"Question")}</h2><div class="options">${(g.options||[]).map((o,i)=>`<button class="quizOpt" data-index="${i}" ${quizAnswered?"disabled":""}>${esc(o)}</button>`).join("")}</div><p class="muted">${g.answered}/${room.players.length} players answered</p>`;
- if(host)html+=`<div class="actions"><button id="nextBtn">NEXT QUESTION</button><button class="secondary" id="lobbyBtn">END GAME</button></div>`;
-}
-if(g.type==="wyr"){
- html+=`<h2>Would you rather…?</h2><div class="options">${(g.wyr||[]).map((o,i)=>`<button class="wyrOpt" data-index="${i}">${esc(o)}</button>`).join("")}</div><p class="muted">${g.votes}/${room.players.length} players voted</p>`;
- if(host)html+=`<div class="actions"><button id="nextBtn">NEXT QUESTION</button><button class="secondary" id="lobbyBtn">END GAME</button></div>`;
-}
-$("gameContent").innerHTML=html;wireGame(g);
-}
-function wireGame(g){
- const next=$("nextBtn");if(next)next.onclick=()=>socket.emit("game:next");
- const back=$("lobbyBtn");if(back)back.onclick=()=>socket.emit("lobby:return");
- if(g.type==="draw")setupCanvas();
- $("guessBtn")?.addEventListener("click",sendGuess);$("guessInput")?.addEventListener("keydown",e=>{if(e.key==="Enter")sendGuess()});
- document.querySelectorAll(".quizOpt").forEach(b=>b.onclick=()=>{quizAnswered=true;socket.emit("quiz:answer",Number(b.dataset.index));document.querySelectorAll(".quizOpt").forEach(x=>x.disabled=true)});
- document.querySelectorAll(".wyrOpt").forEach(b=>b.onclick=()=>{socket.emit("wyr:vote",Number(b.dataset.index));document.querySelectorAll(".wyrOpt").forEach(x=>x.disabled=true)});
- document.querySelectorAll(".voteBtn").forEach(b=>b.onclick=()=>{socket.emit("imposter:vote",b.dataset.id);document.querySelectorAll(".voteBtn").forEach(x=>x.disabled=true)});
-}
-function sendGuess(){const i=$("guessInput");if(!i||!i.value.trim())return;socket.emit("draw:guess",i.value);i.value=""}
-let drawing=false,last=null;
-function setupCanvas(){const c=$("board");if(!c)return;const ctx=c.getContext("2d");ctx.fillStyle="#fff";ctx.fillRect(0,0,c.width,c.height);
- const isDrawer=room.game.drawerId===me;
- function point(e){const r=c.getBoundingClientRect();return {x:(e.clientX-r.left)*c.width/r.width,y:(e.clientY-r.top)*c.height/r.height}}
- c.onpointerdown=e=>{if(!isDrawer)return;drawing=true;last=point(e);c.setPointerCapture(e.pointerId)};
- c.onpointermove=e=>{if(!drawing||!isDrawer)return;const p=point(e),color=$("penColor")?.value||"#20243a",size=Number($("penSize")?.value||5);drawLine(ctx,last,p,color,size);socket.emit("draw:stroke",{a:last,b:p,color,size});last=p};
- c.onpointerup=()=>drawing=false;c.onpointercancel=()=>drawing=false;
- $("clearBoard")?.addEventListener("click",()=>{ctx.clearRect(0,0,c.width,c.height);ctx.fillStyle="#fff";ctx.fillRect(0,0,c.width,c.height);socket.emit("draw:clear")});
-}
-function drawLine(ctx,a,b,color,size){ctx.strokeStyle=color;ctx.lineWidth=size;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
-socket.on("draw:stroke",d=>{const c=$("board");if(c){const ctx=c.getContext("2d");drawLine(ctx,d.a,d.b,d.color,d.size)}});
-socket.on("draw:clear",()=>{const c=$("board");if(c){const x=c.getContext("2d");x.clearRect(0,0,c.width,c.height);x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height)}});
-socket.on("draw:chat",d=>{drawChat.push(d);const box=$("drawMessages");if(box)box.innerHTML=drawChat.map(x=>`<p><b>${esc(x.name)}:</b> ${esc(x.text)}</p>`).join("")});
-socket.on("imposter:result",d=>{window.lastImposter=d.imposterId;renderGame()});
-
+function send(){let i=$('guess');if(i?.value.trim()){socket.emit('draw:guess',i.value);i.value=''}}
+function line(ctx,s){ctx.strokeStyle=s.color;ctx.lineWidth=s.size;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(s.a.x,s.a.y);ctx.lineTo(s.b.x,s.b.y);ctx.stroke()}
+function setupBoard(){let c=$('board');if(!c)return;let ctx=c.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,c.width,c.height);strokes.forEach(s=>line(ctx,s));let drawer=room.game.drawerId===me;function pt(e){let r=c.getBoundingClientRect();return{x:(e.clientX-r.left)*c.width/r.width,y:(e.clientY-r.top)*c.height/r.height}}let down=false,last=null;c.onpointerdown=e=>{if(!drawer)return;down=true;last=pt(e);c.setPointerCapture(e.pointerId)};c.onpointermove=e=>{if(!down||!drawer)return;let p=pt(e),s={a:last,b:p,color:$('color')?.value||'#222',size:+($('size')?.value||7)};line(ctx,s);strokes.push(s);socket.emit('draw:stroke',s);last=p};c.onpointerup=()=>down=false;c.onpointercancel=()=>down=false;$('clear')?.addEventListener('click',()=>{strokes=[];ctx.fillStyle='white';ctx.fillRect(0,0,c.width,c.height);socket.emit('draw:clear')})}
+socket.on('draw:stroke',s=>{strokes.push(s);let c=$('board');if(c)line(c.getContext('2d'),s)});
+socket.on('draw:clear',()=>{strokes=[];let c=$('board');if(c){let x=c.getContext('2d');x.fillStyle='white';x.fillRect(0,0,c.width,c.height)}});
+socket.on('draw:chat',m=>{messages.push(m);let b=$('messages');if(b)b.innerHTML=messages.map(x=>`<p><b>${esc(x.name)}:</b> ${esc(x.text)}</p>`).join('')});
+socket.on('imposter:result',d=>{window.lastImposter=d.imposterId;renderGame()});
 </script></body></html>
